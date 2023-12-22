@@ -1,64 +1,35 @@
 
-import { handlError } from "./exception.js";
+const pesca = "http://fishbase.ropensci.org/species/id"
 
-const pescasub = "https://fishbase.ropensci.org/";
-
-export const pegarTodaInformacao = async () => {
-    try {
-        const response = await fetch(pescasub);
-        handlError(response);
-        return response.json();
-    } catch (error) {
-        console.log('Error >>>', error);
-    }
+export const createPeixe = async (peixe) => {
+    fetch ( pesca, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(peixe),
+    })
+    .then((response) => response.json())
+    .then((data) => console.log("sucesso: ", data))
+    .catch((error) => console.log("Erro: ", error));
 };
 
-export const create = async (novoDado) => {
-    try {
-        const response = await fetch(pescasub, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(novoDado),
-        });
-
-        handlError(response);
-
-        return response.json();
-    } catch (error) {
-        console.log('Error >>>', error);
-    }
+export const deletePeixe = async (peixe) => {
+    fetch(pesca + `/${peixe.id}`, { method: "DELETE" })
+    .then((response) => response.json())
+    .then((data) => console.log("sucesso: ", data))
+    .catch((error) => console.log("Erro: ", error));
 };
 
-export const update = async (id, dadosAtualizados) => {
-    try {
-        const response = await fetch(`${pescasub}/${id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(dadosAtualizados),
-        });
-
-        handlError(response);
-
-        return response.json();
-    } catch (error) {
-        console.log('Error >>>', error);
-    }
-};
-
-export const deletar = async (id) => {
-    try {
-        const response = await fetch(`${pescasub}/${id}`, {
-            method: 'DELETE',
-        });
-
-        handlError(response);
-
-        return response.json(); 
-    } catch (error) {
-        console.log('Error >>>', error);
-    }
-};
+export const updatePeixe = async (peixe) => {
+    fetch(pesca + `/${peixe.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(peixe),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log("sucesso: ", data))
+      .catch((error) => console.log("Erro: ", error));
+  };
