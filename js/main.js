@@ -1,24 +1,44 @@
-// atualiza a importação
-import { pegarTodaInformacao, createPeixe, deletePeixe, UpdatePeixe } from "./service.js";
 
-//adiciona as execuções das funções criadas no service !!Lembra de criar botões com as ids: btnCreate,  btnDelete e  btnUpdate
-document.getElementById('btnCreate').addEventListener('click', () => {
-  const peixe = {
-    //informações do peixe
-  }
-  createPeixe(peixe)
+import { createPeixe, deletePeixe, updatePeixe } from "./service.js";
+
+document.getElementById('btnCreate').addEventListener('click', async () => {
+    const peixe = {
+        nome: "Robalo",
+        tamanho: 30,
+        tipo: "Carnívoro"
+    };
+    try {
+        await createPeixe(peixe);
+    } catch (error) {
+        console.error("Erro ao criar peixe:", error);
+    }
 });
 
-document.getElementById('btnDelete').addEventListener('click', () => {
-  const peixe = {
-    // as mesmas informações do que foi criado
- }
- deletePeixe(Peixe)
+document.getElementById('btnDelete').addEventListener('click', async () => {
+    const peixe = {
+        nome: "Robalo",
+        tamanho: 30,
+        tipo: "Carnívoro",
+        id: 1
+    };
+    try {
+        await deletePeixe(peixe);
+    } catch (error) {
+        console.error("Erro ao excluir peixe:", error);
+    }
 });
 
-document.getElementById('btnUpdate').addEventListener('click', () => {
-  const peixe = {
-    //novas informações para o peixe criado em createPeixe pode ser apenas substituição das informações usadas no createPeixe
-  }
-  updatePeixe(peixe);
+document.getElementById('btnUpdate').addEventListener('click', async () => {
+    const peixe = {
+        id: 2,
+        nome: "Dourado",
+        tamanho: 35,
+        tipo: "Herbívoro"
+    };
+
+    try {
+        await updatePeixe(peixe);
+    } catch (error) {
+        console.error("Erro ao atualizar peixe:", error);
+    }
 });
