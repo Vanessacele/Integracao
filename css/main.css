@@ -72,6 +72,7 @@ article h2 {
 
 .image-gallery img {
     width: 100%;
+    max-width: 300px;
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -80,6 +81,7 @@ article h2 {
 .image-gallery img:hover {
     transform: scale(1.05);
 }
+
 
 footer {
     background-color: #073b4c;
