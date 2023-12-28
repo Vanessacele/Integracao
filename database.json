@@ -1,0 +1,27 @@
+
+{
+    "blog": {
+      "id": 1,
+      "pergunta": "A pesca submarina, também descrita como caça submarina, é uma atividade que envolve o uso de equipamentos simples, como arbaletes e arpões afiados, para capturar peixes embaixo d'água. A modalidade de mergulho empregada na pesca sub é o mergulho livre, que é diferente do mergulho autônomo, já que nele não é utilizado nenhum equipamento que permita respirar embaixo d'água. Inclusive, é proibido o uso de equipamentos de respiração artificial durante qualquer tipo de pesca.",
+      "dicas": "Nas estações de primavera e verão, observa-se que a água no Rio de Janeiro fica mais fria devido à ressurgência. A ressurgência é causada tanto pelos ventos quanto pelas correntes oceânicas. Na costa do Rio de Janeiro, ventos persistentes do nordeste, através do transporte de Ekman, movem águas superficiais em direção ao oceano aberto, permitindo que águas mais frias e ricas em nutrientes alcancem a superfície.",
+      "equipamentos": "Os equipamentos essenciais para a caça submarina incluem o arpão, utilizado para capturar peixes. A máscara de mergulho proporciona visão clara debaixo d'água, enquanto as nadadeiras facilitam o deslocamento, o traje de neoprene mantém a temperatura do corpo em águas mais frias e o cinto de lastro assegura a flutuabilidade adequada. Facas de mergulho são úteis em emergências, a boia de sinalização marca a posição e a lanterna subaquática é essencial para mergulhos noturnos.",
+      "especies_de_peixe": [
+        "Robalo",
+        "Garoupa",
+        "Badejo",
+        "Mero",
+        "Olho de Boi",
+        "Sargo",
+        "Peixe-porco",
+        "Corvina",
+        "Caranha",
+        "Olho de Cão",
+        "Atum",
+        "Cavala",
+        "Barracuda",
+        "Linguado",
+        "Cherne",
+        "Anchova"
+      ]
+    }
+  }
