@@ -17,25 +17,30 @@
 
     <header>
         <div class="container">
-            <h1>Pesca sub B.G</h1>
-            <nav class="main-nav">
+            
+            <nav class="main-nav fixed-top"> 
+                 <!-- para colocar o nav fixo -->
+                <div style="background-color:  #004080">
+                <h1>Pesca sub B.G</h1>
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="dicas.html">Dicas</a></li>
                     <li><a href="equipamentos.html">Equipamentos</a></li>
                     <li><a href="especiedepeixe.html">Especie de Peixe</a></li>
                 </ul>
+                <div class="search-bar">
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="button">Pesquisar</button>
+                    </form>
+                </div>
+                </div>
             </nav>
-            <div class="search-bar">
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="button">Pesquisar</button>
-                </form>
-            </div>
+            
         </div>
     </header>
 
-    <main class="container">
+    <main class="container" style="margin-top: 5rem;">
         <p class="text-center">
             Olá, bem-vindo ao meu blog sobre pesca submarina. Aqui vou falar um pouco sobre meus mergulhos, equipamentos
             e informações sobre o mar.
@@ -89,7 +94,7 @@
             <div class="section">
                 <h2>Lista de Espécies de Peixe</h2>
                 <ul id="lista-especies">
-                    <!-- <li>Robalo</li>
+                    <li>Robalo</li>
                     <li>Garoupa</li>
                     <li>Badejo</li>
                     <li>Mero</li>
@@ -104,7 +109,7 @@
                     <li>Barracuda</li>
                     <li>Linguado</li>
                     <li>Cherne</li>
-                    <li>Anchova</li> -->
+                    <li>Anchova</li>
                 </ul>
             </div>
 
